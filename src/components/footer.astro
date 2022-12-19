@@ -1,0 +1,38 @@
+---
+import Social from "./social.astro";
+
+const platform = "github";
+const username = "withastro";
+
+const links = [
+  {
+    name: "twitter",
+    username: "astrodotbuild",
+  },
+  {
+    name: "twitch",
+    username: "astrodotbuild",
+  },
+  {
+    name: "youtube",
+    username: "astrodotbuild",
+  },
+  {
+    name: "github",
+    username: "astrodotbuild",
+  },
+];
+---
+
+<footer>
+  <p>
+    Learn more about my projects on <a
+      href={`https://www.${platform}.com/${username}`}>{platform}</a
+    >!
+  </p>
+  {
+    links.map((item) => (
+      <Social platform={item.name} username={item.username} />
+    ))
+  }
+</footer>
