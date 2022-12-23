@@ -1,0 +1,16 @@
+---
+type Props = {
+  name: string;
+  username: string;
+};
+
+const { name, username }: Props = Astro.props;
+---
+
+<a
+  href={`https://${name}.com/${username}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img src={`./icons/${name}.svg`} alt={`${name} icon`} class="h-8 w-8" />
+</a>
