@@ -1,7 +1,21 @@
-<nav>
-  <a href="/">Aprendiendo</a>
-  <a href="/">Inicio</a>
-  <a href="/acerca/">Música</a>
-  <a href="/blog/">Ideas</a>
-  <a href="/tags/">Desarrollo</a>
+---
+import Search from "./icons/search.astro";
+---
+
+<nav class="flex flex-col items-center md:flex-row">
+  <a class="mb-6 ml-6 mr-8 md:mb-0" href="/">Aprendiendo</a>
+  <a class="mx-2 mb-6 underline-offset-8 hover:underline md:mb-0" href="/"
+    >Inicio</a
+  >
+  <a
+    class="mx-2 mb-6 underline-offset-8 hover:underline md:mb-0"
+    href="/acerca/">Música</a
+  >
+  <a class="mx-2 mb-6 underline-offset-8 hover:underline md:mb-0" href="/blog/"
+    >Ideas</a
+  >
+  <a class="mx-2 mb-6 underline-offset-8 hover:underline md:mb-0" href="/tags/"
+    >Desarrollo</a
+  >
+  <Search />
 </nav>
