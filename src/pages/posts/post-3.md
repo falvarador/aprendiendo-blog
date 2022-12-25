@@ -4,6 +4,7 @@ description: "I had some challenges, but asking in the community really helped!"
 layout: ../../layouts/post_layout.astro
 pubDate: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]
+timeToRead: "1 min"
 title: My Third Blog Post
 image:
   url: "https://astro.build/assets/blog/community-day/cover.jpg"

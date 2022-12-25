@@ -1,0 +1,42 @@
+---
+import { truncateString } from "../utils/format";
+
+export type Props = {
+  author: string;
+  description: string;
+  pubDate: Date;
+  tags: string[];
+  timeToRead: number;
+  title: string;
+  url: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+};
+
+const {
+  author,
+  description,
+  pubDate,
+  tags,
+  timeToRead,
+  title,
+  url,
+  image,
+}: Props = Astro.props;
+---
+
+<article>
+  <a href={url}>
+    <img src={image.url} alt={image.alt} />
+  </a>
+  <span>{tags.map((tag) => `#${tag}`).join(" ")}</span>
+  <p>{author}</p> |
+  <p>{timeToRead}</p> |
+  <p>{pubDate}</p>
+  <a href={url}>
+    <h2>{title}</h2>
+  </a>
+  <p>{truncateString(description, 56)}</p>
+</article>

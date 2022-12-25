@@ -4,6 +4,7 @@ description: "After learning some Astro, I couldn't stop!"
 layout: ../../layouts/post_layout.astro
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
+timeToRead: "1 min"
 title: My Second Blog Post
 image:
   url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"

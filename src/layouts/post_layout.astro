@@ -1,19 +1,6 @@
 ---
 import Layout from "./layout.astro";
 
-type Post = {
-  author: string;
-  description: string;
-  layout: string;
-  pubDate: Date;
-  tags: string[];
-  title: string;
-  image: {
-    url: string;
-    alt: string;
-  };
-};
-
 const { frontmatter } = Astro.props;
 ---
 
