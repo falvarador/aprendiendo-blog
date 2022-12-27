@@ -1,5 +1,6 @@
 ---
-import { truncateString } from "../utils/format";
+import { truncateString } from "@utils/format";
+import Tags from "@components/article/tags.astro";
 
 export type Props = {
   author: string;
@@ -35,24 +36,14 @@ const {
       alt={image.alt}
     />
   </a>
-  <aside class="flex flex-wrap gap-y-4 gap-x-2">
-    {
-      tags.map((tag) => (
-        <a href={`/tags/${tag}`}>
-          <span class="rounded-2xl border border-accent p-2 text-accent">
-            {tag}
-          </span>
-        </a>
-      ))
-    }
-  </aside>
-  <span class="my-6 flex flex-wrap justify-start space-x-2 text-gray-400">
+  <Tags tags={tags} />
+  <aside class="my-6 flex flex-wrap justify-start space-x-2 text-gray-400">
     <p>{author}</p>
     <span>|</span>
     <p>{timeToRead}</p>
     <span>|</span>
     <p>{new Date(pubDate).toLocaleDateString()}</p>
-  </span>
+  </aside>
   <a href={url}>
     <h2 class="my-2 text-2xl font-medium">{title}</h2>
   </a>

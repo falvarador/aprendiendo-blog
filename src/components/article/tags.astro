@@ -1,0 +1,19 @@
+---
+type Props = {
+  tags: string[];
+};
+
+const { tags }: Props = Astro.props;
+---
+
+<aside class="flex flex-wrap gap-y-4 gap-x-2">
+  {
+    tags.map((tag) => (
+      <a href={`/tags/${tag}`}>
+        <span class="rounded-2xl border border-accent p-2 text-accent">
+          {tag}
+        </span>
+      </a>
+    ))
+  }
+</aside>

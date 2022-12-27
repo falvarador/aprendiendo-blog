@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/layout.astro";
+import Layout from "@layouts/layout.astro";
 
 export async function getStaticPaths({}) {
   const allPosts = await Astro.glob("../posts/*.md");

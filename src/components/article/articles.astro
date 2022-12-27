@@ -1,7 +1,7 @@
 ---
-import Article from "./article.astro";
+import Article from "@components/article/article.astro";
 
-const articles = await Astro.glob("../pages/posts/*.md");
+const articles = await Astro.glob("../../pages/posts/*.md");
 ---
 
 <section>

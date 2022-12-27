@@ -4,7 +4,7 @@ export const get = () =>
   rss({
     title: "Aprendiendo | Blog",
     description: "Un viaje para compartir conocimiento y aprender juntos",
-    site: "https://aprendiendo.netlify.app",
+    site: "https://aprendiendo.run",
     items: import.meta.glob("./**/*.md"),
     customData: `<language>es-mx</language>`,
   });
