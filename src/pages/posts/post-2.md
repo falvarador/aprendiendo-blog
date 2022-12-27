@@ -7,7 +7,7 @@ tags: ["astro", "blogging", "learning in public", "successes"]
 timeToRead: "1 min"
 title: My Second Blog Post
 image:
-  url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
+  url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
   alt: "Thumbnails of websites from the Astro Showcase site."
 ---
 

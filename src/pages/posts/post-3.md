@@ -7,7 +7,7 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 timeToRead: "1 min"
 title: My Third Blog Post
 image:
-  url: "https://astro.build/assets/blog/community-day/cover.jpg"
+  url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
   alt: "The word community with a heart."
 ---
 

@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primary: "#2B2B2B",
         secondary: "#F2F2F2",
+        accent: "#2C5FB2",
       },
       fontFamily: {
         sans: ["Epilogue", ...defaultTheme.fontFamily.sans],

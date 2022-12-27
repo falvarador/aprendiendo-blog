@@ -1,5 +1,5 @@
 ---
-import Post from "./post.astro";
+import Article from "./article.astro";
 
 const articles = await Astro.glob("../pages/posts/*.md");
 ---
@@ -7,7 +7,7 @@ const articles = await Astro.glob("../pages/posts/*.md");
 <section>
   {
     articles.map((post) => (
-      <Post
+      <Article
         author={post.frontmatter.author}
         description={post.frontmatter.description}
         title={post.frontmatter.title}
