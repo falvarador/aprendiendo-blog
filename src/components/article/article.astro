@@ -1,13 +1,14 @@
 ---
 import { truncateString } from "@utils/format";
 import Tags from "@components/article/tags.astro";
+import Info from "./info.astro";
 
 export type Props = {
   author: string;
   description: string;
   pubDate: Date;
   tags: string[];
-  timeToRead: number;
+  timeToRead: string;
   title: string;
   url: string;
   image: {
@@ -28,7 +29,7 @@ const {
 }: Props = Astro.props;
 ---
 
-<article class="mt-16 px-4 lg:px-0">
+<article class="mt-5">
   <a href={url}>
     <img
       class="mb-6 rounded-2xl object-contain"
@@ -37,13 +38,7 @@ const {
     />
   </a>
   <Tags tags={tags} />
-  <aside class="my-6 flex flex-wrap justify-start space-x-2 text-gray-400">
-    <p>{author}</p>
-    <span>|</span>
-    <p>{timeToRead}</p>
-    <span>|</span>
-    <p>{new Date(pubDate).toLocaleDateString()}</p>
-  </aside>
+  <Info author={author} pubDate={pubDate} timeToRead={timeToRead} />
   <a href={url}>
     <h2 class="my-2 text-2xl font-medium">{title}</h2>
   </a>

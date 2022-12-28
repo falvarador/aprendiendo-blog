@@ -27,12 +27,8 @@ const { pageTitle }: Props = Astro.props;
   </head>
   <body>
     <Header />
-
     <section class="container mx-auto">
-      <h1>{pageTitle}</h1>
-
       <slot />
-
       <Footer />
     </section>
   </body>
