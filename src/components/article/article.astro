@@ -3,9 +3,10 @@ import { truncateString } from "@utils/format";
 import Tags from "@components/article/tags.astro";
 import Info from "./info.astro";
 
-export type Props = {
+type Props = {
   author: string;
   description: string;
+  isPrimary: boolean;
   pubDate: Date;
   tags: string[];
   timeToRead: string;
@@ -20,6 +21,7 @@ export type Props = {
 const {
   author,
   description,
+  isPrimary,
   pubDate,
   tags,
   timeToRead,
@@ -29,7 +31,7 @@ const {
 }: Props = Astro.props;
 ---
 
-<article class="mt-5">
+<article class=`mt-8 mb-16 ${isPrimary ? "first-of-type:col-span-2" : ""} `>
   <a href={url}>
     <img
       class="mb-6 rounded-2xl object-contain"
@@ -42,5 +44,5 @@ const {
   <a href={url}>
     <h2 class="my-2 text-2xl font-medium">{title}</h2>
   </a>
-  <p class="text-gray-400">{truncateString(description, 56)}</p>
+  <p class="text-gray-400">{truncateString(description, 256)}</p>
 </article>
