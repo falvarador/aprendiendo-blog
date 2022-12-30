@@ -11,7 +11,7 @@ image:
   alt: "The Astro logo with the word One."
 ---
 
-# What Are Hotspots Hints?
+## What Are Hotspots Hints?
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
