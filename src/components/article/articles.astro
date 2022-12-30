@@ -12,7 +12,7 @@ const { filter = "", isPrimary = false, title }: Props = Astro.props;
 const articles = await Astro.glob("../../pages/posts/*.md");
 ---
 
-<section class="px-4 xl:px-0">
+<section>
   <h2 class="text-2xl font-medium">{title}</h2>
   <aside class="lg:grid lg:grid-cols-2 lg:gap-x-16">
     {

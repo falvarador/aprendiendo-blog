@@ -1,22 +1,29 @@
 ---
+import Info from "@components/article/info.astro";
+import Tags from "@components/article/tags.astro";
 import Layout from "@layouts/layout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout pageTitle={frontmatter.title}>
-  <p>{new Date(frontmatter.pubDate).toLocaleDateString()}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <div class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
-  <slot />
+  <h2 class="text-3xl xl:text-5xl">{frontmatter.title}</h2>
+  <Info
+    author={frontmatter.author}
+    pubDate={frontmatter.pubDate}
+    showAvatar={true}
+    timeToRead={frontmatter.timeToRead}
+  />
+  <img
+    src={frontmatter.image.url}
+    class="mb-6 rounded-2xl object-contain"
+    alt={frontmatter.image.alt}
+  />
+  <p class="mt-12 mb-10 text-primary">{frontmatter.description}</p>
+
+  <Tags tags={frontmatter.tags} />
+
+  <main class="markdown mt-20">
+    <slot />
+  </main>
 </Layout>

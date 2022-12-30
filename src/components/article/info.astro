@@ -2,16 +2,28 @@
 type Props = {
   author: string;
   pubDate: Date;
+  showAvatar?: boolean;
   timeToRead: string;
 };
 
-const { author, pubDate, timeToRead }: Props = Astro.props;
+const { author, pubDate, showAvatar = false, timeToRead }: Props = Astro.props;
 ---
 
-<aside class="my-6 flex flex-wrap justify-start space-x-2 text-gray-400">
-  <p>{author}</p>
-  <span>|</span>
-  <p>{timeToRead}</p>
-  <span>|</span>
-  <p>{new Date(pubDate).toLocaleDateString()}</p>
+<aside class="my-6 flex items-center justify-start text-gray-400">
+  {
+    showAvatar && (
+      <img
+        class="mr-4 h-10 w-10 rounded-full border object-cover"
+        src="/assets/avatars/far_avatar.png"
+        alt={`${author} avatar`}
+      />
+    )
+  }
+  <div class="flex flex-wrap gap-2">
+    <p>{author}</p>
+    <span>|</span>
+    <p>{timeToRead}</p>
+    <span>|</span>
+    <p>{new Date(pubDate).toLocaleDateString()}</p>
+  </div>
 </aside>

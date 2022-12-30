@@ -1,0 +1,7 @@
+.markdown {
+  @apply text-primary;
+}
+
+.markdown h1 {
+  @apply mb-8 text-2xl text-black xl:text-4xl;
+}

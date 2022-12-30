@@ -7,6 +7,8 @@ type Props = {
 };
 
 const { pageTitle }: Props = Astro.props;
+
+import "@styles/global.css";
 ---
 
 <html lang="es">
@@ -27,7 +29,7 @@ const { pageTitle }: Props = Astro.props;
   </head>
   <body>
     <Header />
-    <section class="container mx-auto">
+    <section class="container mx-auto px-4 xl:px-0">
       <slot />
       <Footer />
     </section>
