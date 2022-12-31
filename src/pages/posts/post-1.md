@@ -3,7 +3,7 @@ author: "Freddy Alvarado R"
 description: "This is the first post of my new Astro blog."
 layout: ../../layouts/post_layout.astro
 pubDate: 2022-07-01
-tags: ["astro", "blogging", "learning in public"]
+tags: ["desarrollo", "remix"]
 timeToRead: "2 min"
 title: "My First Blog Post"
 image:

@@ -3,10 +3,12 @@ import Articles from "@components/article/articles.astro";
 import Layout from "@layouts/layout.astro";
 
 const pageTitle: string = "Aprendiendo | Inicio";
+
+const articles = await Astro.glob("../pages/posts/*.md");
 ---
 
 <Layout pageTitle={pageTitle}>
-  <Articles title="Últimos artículos" isPrimary={true} />
+  <Articles articles={articles} title="Últimos artículos" isPrimary={true} />
   <div class="my-24 border-t-2"></div>
-  <Articles title="Últimas tendencias" />
+  <Articles articles={articles} title="Lo más leído" />
 </Layout>

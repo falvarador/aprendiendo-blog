@@ -3,7 +3,7 @@ author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 layout: ../../layouts/post_layout.astro
 pubDate: 2022-07-15
-tags: ["astro", "learning in public", "setbacks", "community"]
+tags: ["ideas", "finanzas"]
 timeToRead: "1 min"
 title: My Third Blog Post
 image:

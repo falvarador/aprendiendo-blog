@@ -3,7 +3,7 @@ author: Astro Learner
 description: "After learning some Astro, I couldn't stop!"
 layout: ../../layouts/post_layout.astro
 pubDate: 2022-07-08
-tags: ["astro", "blogging", "learning in public", "successes"]
+tags: ["musica", "mainstage"]
 timeToRead: "1 min"
 title: My Second Blog Post
 image:

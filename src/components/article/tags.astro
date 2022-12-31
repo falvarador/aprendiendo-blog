@@ -1,4 +1,6 @@
 ---
+import { capitalize } from "@utils/formats";
+
 type Props = {
   tags: string[];
 };
@@ -11,7 +13,7 @@ const { tags }: Props = Astro.props;
     tags.map((tag) => (
       <a href={`/tags/${tag}`}>
         <span class="rounded-2xl border border-accent p-2 text-accent">
-          {tag}
+          {capitalize(tag)}
         </span>
       </a>
     ))
